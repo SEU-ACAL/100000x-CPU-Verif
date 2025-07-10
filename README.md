@@ -236,3 +236,5 @@ xwave -wdb c910.xvcf
 ## License
 
 See `vcs/LICENSE` for licensing information.
+
+## TO DO: ADDING THE METHOD OF UPDATING THE BINARIES OF CPUS.
