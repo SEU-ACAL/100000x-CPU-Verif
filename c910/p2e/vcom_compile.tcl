@@ -14,7 +14,9 @@ design_load -top ${top_module}
 #emulator_spec -add "file ./hw-config.hdf"
 #emulator_spec -add "file ./hw_2P2.hdf"
 emulator_spec -add "file ./hw-config.hdf"
-
+emulator_util -add {default 0}
+emulator_util -add {0.A 70}
+emulator_util -add {0.B 70}
 if { [file exist ./vedit_keep.tcl] } {
   source ./vedit_keep.tcl
 }
@@ -40,6 +42,23 @@ create_clock -sigName ${top_module}.i_pad_jtg_tclk -frequency 10Mhz
 
 dump_clock_region_ports
 #logic_replication -enable
+
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram0.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram1.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram2.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram3.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram4.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram5.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram6.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram7.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram8.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram9.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram10.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram11.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram12.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram13.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram14.mem}
+memory_options -add {use_xdram dut_top.x_axi_slave128.x_f_spsram_large.ram15.mem}
 
 #util_rule_check -disable
 #emulator_util -add {default 0}
@@ -215,6 +234,7 @@ trace_net -add {dut_top.x_cpu_sub_system_axi.x_rv_integration_platform.x_cpu_top
 trace_net -add {dut_top.x_cpu_sub_system_axi.x_rv_integration_platform.x_cpu_top.x_ct_top_0.x_enter_dbg_req_i}
 trace_net -add {dut_top.x_cpu_sub_system_axi.x_rv_integration_platform.x_cpu_top.x_ct_top_0.x_exit_dbg_req_i}
 trace_net -add {dut_top.x_cpu_sub_system_axi.x_rv_integration_platform.x_cpu_top.x_ct_top_0.x_had_dbg_mask}
+
 
 #adding below to identify which is causing post vcom simulaiton fail
 #logic_replication -enable

@@ -146,6 +146,23 @@ trace_signals -add {dut_top.x_cpu_sub_system_axi.x_rv_integration_platform.x_cpu
 
 puts "waveform added"
 
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram0.mem -file ./dut_ram0.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram1.mem -file ./dut_ram1.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram2.mem -file ./dut_ram2.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram3.mem -file ./dut_ram3.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram4.mem -file ./dut_ram4.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram5.mem -file ./dut_ram5.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram6.mem -file ./dut_ram6.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram7.mem -file ./dut_ram7.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram8.mem -file ./dut_ram8.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram9.mem -file ./dut_ram9.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram10.mem -file ./dut_ram10.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram11.mem -file ./dut_ram11.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram12.mem -file ./dut_ram12.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram13.mem -file ./dut_ram13.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram14.mem -file ./dut_ram14.txt
+memory -write -format %readmemh -name dut_top.x_axi_slave128.x_f_spsram_large.ram15.mem -file ./dut_ram15.txt
+
 force i_pad_jtg_tdi 0
 force i_pad_jtg_tms 0
 force i_pad_jtg_trst_b 1
